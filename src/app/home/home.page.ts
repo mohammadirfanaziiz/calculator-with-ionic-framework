@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   expression: string = '0';
   result: string = '';
-  isDarkMode: boolean = false;  // Menentukan apakah dark mode aktif atau tidak
+  isDarkMode: boolean = false;  
 
   append(value: string) {
     const lastChar = this.expression.slice(-1);
