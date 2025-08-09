@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Calculator</ion-title>
     <ion-buttons slot="end">
-      <!-- Switch untuk Dark Mode -->
+      <!-- Dark Mode -->
       <ion-toggle [(ngModel)]="isDarkMode" (ionChange)="toggleTheme()" color="primary"></ion-toggle>
     </ion-buttons>
   </ion-toolbar>
@@ -24,7 +24,6 @@
           <ion-col size="2.5"><ion-button expand="block" color="warning" (click)="backspace()">⌫</ion-button></ion-col>
           <ion-col size="2"><ion-button expand="block" color="warning" (click)="append('(')">(</ion-button></ion-col>
           <ion-col size="2"><ion-button expand="block" color="warning" (click)="append(')')">)</ion-button></ion-col>
-          <!-- Tombol % di samping ) dan lebih kecil -->
           <ion-col size="3"><ion-button expand="block" color="primary" (click)="appendPercent()" class="percent-btn">%</ion-button></ion-col>
         </ion-row>
         <ion-row>
