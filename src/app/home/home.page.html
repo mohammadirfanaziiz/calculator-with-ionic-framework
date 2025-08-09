@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculator</ion-title>
+    <ion-buttons slot="end">
+      <!-- Switch untuk Dark Mode -->
+      <ion-toggle [(ngModel)]="isDarkMode" (ionChange)="toggleTheme()" color="primary"></ion-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="calculator">
+    <!-- Display -->
+    <div class="display">
+      <div class="expression">{{ expression }}</div>
+      <div class="result">{{ result }}</div>
+    </div>
+
+    <!-- Tombol -->
+    <div class="buttons">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="2.5"><ion-button expand="block" color="warning" (click)="clear()">AC</ion-button></ion-col>
+          <ion-col size="2.5"><ion-button expand="block" color="warning" (click)="backspace()">⌫</ion-button></ion-col>
+          <ion-col size="2"><ion-button expand="block" color="warning" (click)="append('(')">(</ion-button></ion-col>
+          <ion-col size="2"><ion-button expand="block" color="warning" (click)="append(')')">)</ion-button></ion-col>
+          <!-- Tombol % di samping ) dan lebih kecil -->
+          <ion-col size="3"><ion-button expand="block" color="primary" (click)="appendPercent()" class="percent-btn">%</ion-button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('7')">7</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('8')">8</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('9')">9</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="warning" (click)="append('÷')">÷</ion-button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('4')">4</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('5')">5</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('6')">6</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="warning" (click)="append('×')">×</ion-button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('1')">1</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('2')">2</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('3')">3</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="warning" (click)="append('-')">−</ion-button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('0')">0</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="primary" (click)="append('.')">.</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="warning" (click)="calculate()">=</ion-button></ion-col>
+          <ion-col><ion-button expand="block" color="warning" (click)="append('+')">+</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

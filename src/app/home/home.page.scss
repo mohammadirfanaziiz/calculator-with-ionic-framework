@@ -1,0 +1,125 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+ion-content {
+  --background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Membuat tombol kalkulator di bawah */
+  height: 100vh; /* Membuat konten mengambil seluruh tinggi layar */
+}
+
+/* Display styling */
+.display {
+  text-align: right;
+  padding: 30px;
+  font-size: 3rem;
+  background-color: #222;
+  color: #fff;
+  border-radius: 20px;
+  margin: 20px 10px;
+  flex-grow: 1;  /* Membuat display lebih besar dan fleksibel */
+  min-height: 120px; /* Memastikan display cukup tinggi */
+}
+
+.expression {
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+
+.result {
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* Button grid */
+.buttons {
+  padding: 0 10px;
+  margin-top: auto;  /* Tombol berada di bawah */
+}
+
+ion-button {
+  height: 70px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+ion-button[color="medium"] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+ion-button[color="warning"] {
+  background-color: #f39c12;
+  color: white;
+}
+
+ion-button[color="success"] {
+  background-color: #27ae60;
+  color: white;
+}
+
+ion-button[color="primary"] {
+  background-color: #3498db;
+  color: white;
+}
+
+ion-button[color="secondary"] {
+  background-color: #9b59b6; /* Color for % button */
+  color: white;
+  font-size: 1.2rem;
+  height: 55px;
+  line-height: 55px;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Active button effect */
+ion-button:active {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+/* Dark Mode styles */
+ion-content.dark-mode {
+  --background: #2c2c2c;
+}
+
+ion-button.dark-mode {
+  background-color: #444;
+  color: white;
+}
+
+ion-button[color="warning"].dark-mode {
+  background-color: #e67e22;
+}
+
+ion-button[color="success"].dark-mode {
+  background-color: #9b59b6;
+}
+
+/* History Section */
+.history {
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
